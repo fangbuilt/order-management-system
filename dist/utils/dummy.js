@@ -1,6 +1,10 @@
-export const menu = [
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.cart = exports.menu = void 0;
+exports.menu = [
     { id: "M1", name: "Nasi Goreng Spesial", price: 25000, tags: ["Populer"] },
     { id: "M2", name: "Mie Ayam Jamur", price: 20000, tags: ["Favorit"] },
     { id: "M3", name: "Es Teh Manis", price: 5000, tags: ["Dingin"] },
 ];
-export const cart = [];
+exports.cart = [];
+//# sourceMappingURL=dummy.js.map

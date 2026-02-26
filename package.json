@@ -1,0 +1,9 @@
+{
+  "name": "order-management-system",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "npx tsc && node dist/main.js"
+  }
+}
