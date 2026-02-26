@@ -1,0 +1,1 @@
+type FoodItem = { id: string; name: string; price: number; tags: string[] }; // Contoh: ["Pedas", "Vegetarian"] }; const menu: FoodItem[] = [ { id: "M1", name: "Nasi Goreng Spesial", price: 25000, tags: ["Populer"] }, { id: "M2", name: "Mie Ayam Jamur", price: 20000, tags: ["Favorit"] }, { id: "M3", name: "Es Teh Manis", price: 5000, tags: ["Dingin"] }, ];
