@@ -5,5 +5,8 @@
     "build": "tsc",
     "start": "node dist/main.js",
     "dev": "npx tsc && node dist/main.js"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.1"
   }
 }
