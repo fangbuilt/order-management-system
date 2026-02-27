@@ -24,7 +24,7 @@ export function addToCart(food: FoodItem, quantity: number = 1): CartItem {
     return newItem;
   }
 
-  const existing = cart[existingIndex]!;
+  const existing = cart[existingIndex] as CartItem;
   const updatedItem: CartItem = {
     ...existing,
     quantity: existing.quantity + quantity,

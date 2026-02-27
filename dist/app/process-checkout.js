@@ -1,30 +1,27 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.processCheckout = processCheckout;
-const dummy_1 = require("../utils/dummy");
-const helpers_1 = require("../utils/helpers");
-function processCheckout() {
-    if (dummy_1.cart.length === 0) {
+import { cart } from "../utils/dummy";
+import { formatDate, formatRupiah, getDiscount, getDiscountPercent, getSubtotal, } from "../utils/helpers";
+export function processCheckout() {
+    if (cart.length === 0) {
         throw new Error("Keranjang kosong. Tambahkan item sebelum checkout.");
     }
-    const subtotal = (0, helpers_1.getSubtotal)();
-    const discount = (0, helpers_1.getDiscount)(subtotal);
+    const subtotal = getSubtotal();
+    const discount = getDiscount(subtotal);
     const total = subtotal - discount;
-    const discountPercent = (0, helpers_1.getDiscountPercent)(subtotal);
+    const discountPercent = getDiscountPercent(subtotal);
     if (!Number.isInteger(total)) {
         throw new Error(`Total mengandung desimal (${total}). Periksa harga & kalkulasi diskon.`);
     }
-    const tanggal = (0, helpers_1.formatDate)(new Date());
+    const tanggal = formatDate(new Date());
     console.log("\n--- STRUK PEMBAYARAN ---");
-    dummy_1.cart.forEach((item) => {
+    cart.forEach((item) => {
         const lineTotal = item.price * item.quantity;
-        console.log(`${item.name} x${item.quantity} = ${(0, helpers_1.formatRupiah)(lineTotal)}`);
+        console.log(`${item.name} x${item.quantity} = ${formatRupiah(lineTotal)}`);
     });
     if (discount > 0) {
-        console.log(`\nSelamat! Kamu dapat diskon ${discountPercent}%: -${(0, helpers_1.formatRupiah)(discount)}`);
+        console.log(`\nSelamat! Kamu dapat diskon ${discountPercent}%: -${formatRupiah(discount)}`);
     }
     console.log("------------------------");
-    console.log(`TOTAL AKHIR: ${(0, helpers_1.formatRupiah)(total)}`);
+    console.log(`TOTAL AKHIR: ${formatRupiah(total)}`);
     console.log(`Status Pesanan: PAID`);
     const transaction = {
         tanggal,

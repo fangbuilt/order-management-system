@@ -1,4 +1,4 @@
-import { FoodItem } from "./types";
+import type { FoodItem } from "./types";
 export declare const formatRupiah: (amount: number) => string;
 export declare const formatDate: (date: Date) => string;
 export declare const findInMenu: (id: string) => FoodItem | undefined;
