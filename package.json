@@ -1,12 +1,13 @@
 {
-  "name": "order-management-system",
-  "type": "commonjs",
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/main.js",
-    "dev": "npx tsc && node dist/main.js"
-  },
-  "devDependencies": {
-    "@types/node": "^25.3.1"
-  }
+	"name": "order-management-system",
+	"type": "module",
+	"scripts": {
+		"build": "tsc",
+		"start": "node dist/main.js",
+		"dev": "npx tsc && node dist/main.js"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.4",
+		"@types/node": "^25.3.1"
+	}
 }

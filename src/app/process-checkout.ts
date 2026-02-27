@@ -6,7 +6,7 @@ import {
   getDiscountPercent,
   getSubtotal,
 } from "../utils/helpers";
-import { TransactionData } from "../utils/types";
+import type { TransactionData } from "../utils/types";
 
 export function processCheckout(): TransactionData {
   if (cart.length === 0) {

@@ -1,4 +1,4 @@
-import { CartItem, FoodItem } from "./types";
+import type { CartItem, FoodItem } from "./types";
 
 export const menu: FoodItem[] = [
   { id: "M1", name: "Nasi Goreng Spesial", price: 25000, tags: ["Populer"] },

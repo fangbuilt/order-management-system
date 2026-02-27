@@ -1,6 +1,6 @@
 import { cart } from "../utils/dummy";
 import { findInCart, findInMenu } from "../utils/helpers";
-import { CartItem, FoodItem } from "../utils/types";
+import type { CartItem, FoodItem } from "../utils/types";
 
 export function addToCart(food: FoodItem, quantity: number = 1): CartItem {
   if (!findInMenu(food.id)) {

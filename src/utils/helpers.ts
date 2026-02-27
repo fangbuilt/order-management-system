@@ -1,5 +1,5 @@
 import { cart, menu } from "./dummy";
-import { FoodItem } from "./types";
+import type { FoodItem } from "./types";
 
 export const formatRupiah = (amount: number): string =>
   `Rp ${amount.toLocaleString("id-ID")}`;
