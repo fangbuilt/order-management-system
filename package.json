@@ -1,0 +1,11 @@
+{
+	"name": "order-management-system",
+	"type": "module",
+	"scripts": {
+		"dev": "pnpx tsx src/main.ts"
+	},
+	"devDependencies": {
+		"@types/node": "^25.3.1",
+		"tsx": "^4.21.0"
+	}
+}
